@@ -24,5 +24,27 @@ function returnRandomStoryString() {
 generateBtn.addEventListener("click", generateStory);
 
 function generateStory() {
-  // TODO: on va compléter ça ensemble à la prochaine étape
+  let newStory = returnRandomStoryString();
+
+  const xItem = randomValueFromArray(insertX);
+  const yItem = randomValueFromArray(insertY);
+  const zItem = randomValueFromArray(insertZ);
+
+  newStory = newStory.replaceAll(":insertx:", xItem);
+  newStory = newStory.replaceAll(":inserty:", yItem);
+  newStory = newStory.replaceAll(":insertz:", zItem);
+
+  if (customName.value !== "") {
+    const name = customName.value;
+    newStory = newStory.replaceAll("Bob", name);
+  }
+
+  if (document.getElementById("uk").checked) {
+    const weight = Math.round(300 / 14) + " stone";
+    const temperature = Math.round((94 - 32) * 5 / 9) + " centigrade";
+    newStory = newStory.replaceAll("300lb", weight);
+    newStory = newStory.replaceAll("94 degrees fahrenheit", temperature);
+  }
+
+  story.textContent = newStory;
 }
