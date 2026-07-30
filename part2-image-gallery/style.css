@@ -46,3 +46,11 @@ body {
   object-fit: cover;
   cursor: pointer;
 }
+
+/* Improve keyboard focus visibility for accessibility */
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 2px solid dodgerblue;
+  outline-offset: 2px;
+}
