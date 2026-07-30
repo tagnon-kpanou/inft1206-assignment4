@@ -1,3 +1,4 @@
+// Bouncing Balls - Shape/Ball/EvilCircle classes with keyboard-controlled circle
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 

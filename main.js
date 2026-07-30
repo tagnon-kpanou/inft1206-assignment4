@@ -1,3 +1,4 @@
+// Silly Story Generator - handles random story generation and unit conversion
 const customName = document.getElementById("custom-name");
 const generateBtn = document.querySelector(".generate");
 const story = document.querySelector(".story");

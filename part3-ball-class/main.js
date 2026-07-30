@@ -1,3 +1,4 @@
+// Bouncing Balls - Ball class with canvas animation and collision detection
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
